@@ -35,9 +35,6 @@ int fibo3(int n)
     }
     return fibo3(n - 1) + fibo3(n - 2);
 }
-int fibo4(int n)
-{
-}
 
 int main(int argc, const char *argv[])
 {
