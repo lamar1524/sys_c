@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-
 int fibo1(int n)
 {
     int n0 = 1;
@@ -29,7 +28,7 @@ int fibo2(int n)
 
 int fibo3(int n)
 {
-    if (n == 0 || n == 1)
+    if (n == 1 || n == 2)
     {
         return 1;
     }
@@ -42,7 +41,9 @@ int main(int argc, const char *argv[])
     printf("Podaj który wyraz ciągu chcesz \n");
     int a;
     scanf("%d", &a);
-    printf("%d \n", fibo1(a));
+    printf("%d \n", fibo3(a));
+    printTree(kolejnosc);
+    /*
     printf("--------SPOSÓB 2-------- \n");
     printf("Podaj który wyraz ciągu chcesz \n");
     int b;
@@ -52,7 +53,7 @@ int main(int argc, const char *argv[])
     printf("Podaj który wyraz ciągu chcesz \n");
     int c;
     scanf("%d", &c);
-    printf("%d \n", fibo2(c));
-    printf("------------------------ \n");
+    printf("%d \n", fibo3(c));
+    printf("------------------------ \n");*/
     return 0;
 }
