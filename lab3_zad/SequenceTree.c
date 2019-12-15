@@ -90,7 +90,7 @@ double a1(int n)
 		return 4.0;
 	}
     double wynik;
-    wynik =  +0.5 * a1(n - 2) + 2 * a1(n - 1);
+    wynik =  0.5 * a1(n - 2) + 2 * a1(n - 1);
     end.key = n;
     end.value = wynik;
     push(stack, end);
