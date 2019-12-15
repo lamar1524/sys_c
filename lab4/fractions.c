@@ -220,36 +220,27 @@ int main()
         printf("To jest ulamek\n");
         printFraction(ulamek);
     }*/
-    struct Fraction ulamek;
+    struct Fraction ulamek,ulamek2;
     char linia[80+1];
-   
-    do{
-        printf(" a/b = ");
-        fgets(linia, 81, stdin);
-    }
-    while(!getFraction(&ulamek, linia));
+    char linia2[80+1];
+
+    printf(" a/b = ");
+    fgets(linia, 81, stdin);
+    printf(" c/d = ");
+    fgets(linia2, 81, stdin);
+    
+    getFraction(&ulamek, linia);
     printFraction(ulamek);
-   
-    /*  char s[10] = " ala ";
-    printf("%s\n", s);
-    trim(s);
-    printf("%s\n", s, '$');
-   
-    struct Fraction a, b;
-    printf("Podaj dwa ulamki, kazda liczbe z nich oddziel spacja\n");
-    scanf("%d%d%d%d", &a.num, &a.den, &b.num, &b.den);
-    printf("Ułamek nr 1: ");
-    printFraction(a);
-    printf("Ułamek nr 2: ");
-    printFraction(b);
+    getFraction(&ulamek2, linia2);
+    printFraction(ulamek2);
     printf("Suma = ");
-    printFraction(sum(a, b));
+    printFraction(sum(ulamek, ulamek2));
     printf("Roznica = ");
-    printFraction(diff(a, b));
+    printFraction(diff(ulamek, ulamek2));
     printf("Mnozenie = ");
-    printFraction(mul(a, b));
+    printFraction(mul(ulamek, ulamek2));
     printf("Dzielenie = ");
-    printFraction(div(a, b));
-    return 0;*/
+    printFraction(div2(ulamek, ulamek2));
+    return 0;
    
 }
