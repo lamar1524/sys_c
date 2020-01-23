@@ -32,31 +32,21 @@ int main(int argc, char *argv[])
     {
         if (j >= 0)
         {
-            if (temp[i] < bString[j] - 48)
+            if (aString[i] - 48 < bString[j] - 48)
             {
                 temp[i] += 10;
                 temp[i - 1]--;
-                if (temp[i - 1] == -1)
-                    temp[i - 1] = 9;
-            }
-            else
-            {
-                if (temp[i] == -1)
-                {
-                    temp[i] = 9;
-                    if (i > 0)
-                    {
-                        temp[i - 1]--;
-                    }
-                }
             }
         }
-        else if (temp[i + 1] == 9)
+        else
         {
-            if (aString[i] - 48 == 0)
+            if (temp[i] == -1)
+            {
                 temp[i] = 9;
-            else{
-                temp[i]--;
+                if (i > 0)
+                {
+                    temp[i - 1]--;
+                }
             }
         }
     }

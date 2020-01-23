@@ -158,7 +158,7 @@ int main(int argc, char* argv[]) {
 		exit(EXIT_FAILURE);
 	}
 
-	add2path(path);
+	add2path(rpath);
 
 	return 0;
 }
